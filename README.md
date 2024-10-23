@@ -1,5 +1,4 @@
-Nama : Muhammad Ramadhan Aditya Putra (2602168772)
-Universitas Bina Nusantara - Mobile Application and Technology
+Muhammad Ramadhan Aditya Putra (2602168772) Universitas Bina Nusantara - Mobile Application and Technology
 
 House Selling App
 
