@@ -1,3 +1,6 @@
+Nama : Muhammad Ramadhan Aditya Putra (2602168772)
+Universitas Bina Nusantara - Mobile Application and Technology
+
 House Selling App
 
 The **House Selling App** is an Android application designed to provide users with the ability to search for and view property listings. The app connects to a backend API to retrieve search results and detailed information about specific properties. This project uses **Kotlin**, **MVVM architecture**, and **Dagger-Hilt** for dependency injection.
