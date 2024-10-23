@@ -18,8 +18,8 @@ data class Attributes(
     val bathrooms: Int,
     val bedrooms: Int,
     val price: Int,
-    val pricePerSquareFoot: Double, // Tambahkan atribut ini
-    val floorLevel: String // Tambahkan atribut ini
+    val pricePerSquareFoot: Double, 
+    val floorLevel: String 
 )
 
 data class ListingDetail(
