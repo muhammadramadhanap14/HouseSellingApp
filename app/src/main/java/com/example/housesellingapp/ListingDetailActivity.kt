@@ -54,8 +54,8 @@ class ListingDetailActivity : AppCompatActivity() {
 
         // Update TextView dengan data properti
         binding.propertyPrice.text = "$${listingDetail.attributes.price ?: "N/A"}"
-        binding.propertyName.text = listingDetail.address.title ?: "N/A"
-        binding.propertyLocation.text = listingDetail.address.subtitle ?: "N/A"
+        binding.propertyName.text = listingDetail.address?.title ?: "N/A"
+        binding.propertyLocation.text = listingDetail.address?.subtitle ?: "N/A"
         binding.propertyAttributes.text = "${listingDetail.attributes.bedrooms ?: "No description available."} Bedrooms, " +
                 "${listingDetail.attributes.bathrooms ?: 0} Bathrooms, " +
                 "${listingDetail.attributes.area_size ?: 0} sqft"
@@ -63,6 +63,13 @@ class ListingDetailActivity : AppCompatActivity() {
         // Mengupdate detail properti
         binding.propertyDetailPricePerSqft.text = "Price/sqft: $${listingDetail.attributes.pricePerSquareFoot ?: "N/A"} psf"
         binding.propertyDetailFloorLevel.text = "Floor Level: ${listingDetail.attributes.floorLevel ?: "N/A"}"
+        binding.propertyDetailFurnishing.text = "Furishing: ${listingDetail.attributes.furnishing ?: "N/A"}"
+        binding.propertyDetailFurnishing.text = "Facing: ${listingDetail.attributes.facing ?: "N/A"}"
+        binding.propertyDetailFurnishing.text = "Overlooking view: ${listingDetail.attributes.overlooking_view ?: "N/A"}"
+        binding.propertyDetailFurnishing.text = "Built year (TOP): ${listingDetail.attributes.built_year ?: "N/A"}"
+        binding.propertyDetailFurnishing.text = "Tenure: ${listingDetail.attributes.tenure ?: "N/A"}"
+        binding.propertyDetailFurnishing.text = "Property type: ${listingDetail.attributes.property_type ?: "N/A"}"
+        binding.propertyDetailFurnishing.text = "Last update: ${listingDetail.attributes.last_update ?: "N/A"}"
 
         // Menampilkan deskripsi properti
         binding.propertyDescription.text = listingDetail.description ?: "No description available."
