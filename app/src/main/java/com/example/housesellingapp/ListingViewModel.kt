@@ -1,5 +1,6 @@
 package com.example.housesellingapp
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -33,10 +34,10 @@ private val repository: ListingRepository
         viewModelScope.launch {
             try {
                 val detail = repository.getListingDetail(id)
-                _listingDetail.value =
-                    (detail ?: ListingDetailActivity()) as ListingDetail? // Menetapkan nilai default jika null
+                Log.d("ListingViewModel", "Listing detail: $detail")
+                _listingDetail.value = (detail ?: ListingDetailActivity()) as ListingDetail? // Menggunakan objek default jika null
             } catch (e: Exception) {
-                _listingDetail.value = null // Set null jika terjadi kesalahan
+                _listingDetail.value = null
                 e.printStackTrace()
             }
         }
