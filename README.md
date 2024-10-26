@@ -26,7 +26,7 @@ The **House Selling App** is an Android application designed to enable users to 
 - **Coroutines**: Utilized for asynchronous operations and network requests.
 - **Glide**: Manages image loading and caching.
 - **RecyclerView**: Efficiently displays property listings in a list.
-- **LiveData**: Observes and reacts to data changes in the ViewModel, enabling seamless UI updates.
+- **LiveData**: Observes and reacts to data changes, enabling seamless UI updates.
 
 ---
 
@@ -47,7 +47,6 @@ The **House Selling App** is an Android application designed to enable users to 
 │
 ├── ui/
 │   ├── ListingAdapter.kt        # RecyclerView adapter for displaying listings
-│   ├── ListingViewModel.kt      # ViewModel for managing listing data
 │   ├── MainActivity.kt          # Main entry point of the application
 │   ├── SearchResultsActivity.kt  # Activity to display search results
 │   ├── ListingDetailActivity.kt  # Activity to display detailed property info
@@ -67,15 +66,12 @@ The **House Selling App** is an Android application designed to enable users to 
    Manages the display of property listings within a `RecyclerView`, utilizing **Glide** for image handling. Click listeners are set up to navigate users to the detailed view of a selected listing.
 
 2. **ListingDetailActivity.kt**  
-   Displays detailed property information, including price, address, and specific property features like bedrooms and bathrooms. Data is retrieved from the `ListingViewModel`.
+   Displays detailed property information, including price, address, and specific property features like bedrooms and bathrooms. Data is retrieved from the repository.
 
-3. **ListingViewModel.kt**  
-   Manages data for listings and their details, fetching from the `ListingRepository`, which connects to the API. Observed by **LiveData**, the ViewModel updates the UI upon data changes.
+3. **SearchResultsActivity.kt**  
+   Fetches and displays search results from the API, observing data to update the UI dynamically.
 
-4. **SearchResultsActivity.kt**  
-   Fetches and displays search results from the API, observing the `listings` LiveData in the `ListingViewModel` to update the UI dynamically.
-
-5. **MainActivity.kt**  
+4. **MainActivity.kt**  
    Serves as the app’s entry point, setting up the initial content view and initializing essential components.
 
 ---
